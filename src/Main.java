@@ -1,4 +1,5 @@
 import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -102,13 +103,15 @@ public class Main {
 
     public static void task4() {
         System.out.println("            Задача 4");
-        int[] oneMassive = {1, 2, 3};
-
+        int[] oneMassive = new int[3];
+        oneMassive[0] = 1;
+        oneMassive[1] = 2;
+        oneMassive[2] = 3;
         for (int index = 0; index < oneMassive.length; index++) {
             if (oneMassive[index] % 2 != 0) {
                 oneMassive[index] += 1;
-                System.out.println(Arrays.toString(oneMassive));           //Почему через Arrays выводится каждое изменение значения массива, а не конечный результат?
             }
         }
+        System.out.println(Arrays.toString(oneMassive));
     }
 }
